@@ -5,7 +5,8 @@
 %define		pdir	Test
 %define		pnam	Needs
 %include	/usr/lib/rpm/macros.perl
-Summary:	Test::Needs - Skip tests when modules not available
+Summary:	Test::Needs - skip tests when modules not available
+Summary(pl.UTF-8):	Test::Needs - pomijanie testów, jeśli moduły nie są dostępne
 Name:		perl-Test-Needs
 Version:	0.002005
 Release:	1
@@ -18,6 +19,7 @@ URL:		http://search.cpan.org/dist/Test-Needs/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-Test-Simple >= 0.45
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -28,18 +30,12 @@ will be loaded, and optionally have their versions checked. If the
 module is missing, the test script will be skipped. Modules that are
 found but fail to compile will exit with an error rather than skip.
 
-If used in a subtest, the remainder of the subtest will be skipped.
-
-Skipping will work even if some tests have already been run, or if a
-plan has been declared.
-
-Versions are checked via a $module->VERSION($wanted_version) call.
-Versions must be provided in a format that will be accepted. No extra
-processing is done on them.
-
-If perl is used as a module, the version is checked against the
-running perl version ($]). The version can be specified as a number,
-dotted-decimal string, v-string, or version object.
+%description -l pl.UTF-8
+Moduł pozwalający na pomijanie skryptów testowych, jeśli moduły nie są
+dostępne. Żądane moduły są ładowane, a ich wersje opcjonalnie
+sprawdzane. Jeśli modułu brakuje, skrypt testowy jest pomijany; moduły
+znalezione, ale nie kompilujące się powodują zakończenie testu z
+błędem zamiast pominięcia.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
