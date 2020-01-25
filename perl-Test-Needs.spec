@@ -4,7 +4,6 @@
 #
 %define		pdir	Test
 %define		pnam	Needs
-%include	/usr/lib/rpm/macros.perl
 Summary:	Test::Needs - skip tests when modules not available
 Summary(pl.UTF-8):	Test::Needs - pomijanie testów, jeśli moduły nie są dostępne
 Name:		perl-Test-Needs
