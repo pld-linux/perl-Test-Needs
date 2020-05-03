@@ -7,16 +7,17 @@
 Summary:	Test::Needs - skip tests when modules not available
 Summary(pl.UTF-8):	Test::Needs - pomijanie testów, jeśli moduły nie są dostępne
 Name:		perl-Test-Needs
-Version:	0.002005
+Version:	0.002006
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	356634a56c99282e8059f290f5d534c8
-URL:		http://search.cpan.org/dist/Test-Needs/
+# Source0-md5:	d5c96d51d8d5510f7c0b7f354c49af1c
+URL:		https://metacpan.org/release/Test-Needs
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-Test-Simple >= 0.45
 %endif
