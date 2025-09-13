@@ -14,7 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	2b3d10946001561297624e7668f09c26
-URL:		https://metacpan.org/release/Test-Needs
+URL:		https://metacpan.org/dist/Test-Needs
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
